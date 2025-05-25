@@ -32,8 +32,8 @@ body {
 }
 
 .pokemon-list {
-  width: 310px;
-  height: 520px;
+  width: 310px; /* Fixed width for the card container */
+  height: 520px; /* Fixed height for the card container */
   position: relative;
 }
 
@@ -63,30 +63,33 @@ body {
   opacity:0;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column; /* Stack children vertically */
+  /* Removed justify-content: space-between; as it's now handled by flex-grow on image-container */
   position: absolute;
-  padding: 12px;
+  padding: 0; /* Remove padding from card, add to inner sections */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
+  overflow: hidden; /* CRITICAL: Ensures content stays within rounded corners */
 }
 
-.selected {
-  opacity: 1;
-  z-index: 1;
-}
-
+/* Background images for the card - now with cover to fill the space */
 .bg-1 {
-  background: url(../images/bg-1.jpg) no-repeat;
+  background: url(../images/bg-1.jpg) no-repeat center center / cover;
 }
 
 .bg-2 {
-  background: url(../images/bg-2.jpg) no-repeat;
+  background: url(../images/bg-2.jpg) no-repeat center center / cover;
 }
 
 .bg-3 {
-  background: url(../images/bg-3.jpg) no-repeat;
+  background: url(../images/bg-3.jpg) no-repeat center center / cover;
+}
+
+/* Selected Card: Chained selector as discussed */
+.selected.card {
+  opacity: 1;
+  z-index: 1;
 }
 
 .card .information {
@@ -113,50 +116,77 @@ body {
 
 .card .image-container {
   text-align: center;
+  padding: 10px 0; /* Add padding around the image */
+  flex-grow: 1; /* Allows the image container to take up available vertical space */
+  display: flex; /* Make it a flex container to center the image */
+  align-items: center;
+  justify-content: center;
+  /* Optional: Background color for image area if needed, e.g., background-color: #f8f8f8; */
 }
 
+.card .pokemon-image {
+    max-width: 90%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit image height to prevent it from dominating */
+    object-fit: contain; /* Ensure the image fits without cropping */
+}
+
+/* Description Section */
 .card .description {
-  background: rgba(255, 255, 255, 0.8);
+  background-color: #0000004b;
+  padding: 15px 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: #ffffff;
 }
 
-.cartao .description .title {
-  background-color: #333333;
-  font-size: 15px;
-  color: white;
-  padding: 12px;
+.card .description .title {
+  font-size: 18px; /* Adjusted font size */
+  margin-bottom: 8px; /* Space between title and text */
+  color: #ffffff; /* Ensure title is dark */
 }
 
 .card .description .text {
   font-size: 14px;
-  padding: 12px;
+  padding: 0;
   text-align: justify;
-  max-height: 115px;
+  max-height: 80px;
   overflow-y: auto;
+  color: #ffffff;
 }
 
-.card .description.details {
-    display: flex; /* Make the main container a flex container */
-    justify-content: space-around; /* Distribute items with space between them */
-    align-items: flex-start; /* Align items to the top if they have different heights */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-    gap: 15px; /* Add some space between items */
-    margin-top: 10px; /* Adjust as needed */
+/* Details Container (Height, Weight, Type, Gender) */
+.details-container { 
+    background-color:#0000004b;
+    padding: 15px 10px; /* Add padding */
+    border-bottom-left-radius: 10px; /* Match card's border radius */
+    border-bottom-right-radius: 10px; /* Match card's border radius */
+    display: flex; /* Make it a flex container */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap if screen is too narrow */
+    gap: 15px 10px; /* Vertical and horizontal gap between items */
+    color: #333; /* Default text color for details */
 }
 
-.card .description .detail-item {
-    display: flex; /* Make each detail item a flex container */
-    flex-direction: column; /* Stack the h3 and p vertically */
-    align-items: center; /* Center the text horizontally within each item */
-    text-align: center; /* Ensure text alignment is centered */
+.details-container .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within each detail item */
+    text-align: center;
+    flex-basis: 45%; /* Approx. half width for 2 items per row, adjust as needed */
+    /* If you have 4 items, you might want flex-basis: 22% or similar */
+    /* If you want to force 2x2 grid, use flex-basis: 45% and adjust gap */
 }
 
-.description.details .title {
-    font-size: 16px; /* Adjust font size as needed */
-    margin-bottom: 5px; /* Space between title and text */
-    color: #f1ecff; /* Example color, adjust to your design */
+.details-container .title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffffff; /* Darker color for titles */
 }
 
-.description.details .text {
-    font-size: 14px; /* Adjust font size as needed */
-    color: #c9c9c9; /* Example color, adjust to your design */
+.details-container .text {
+    font-size: 14px;
+    color: #ffffff; /* Darker color for text */
 }

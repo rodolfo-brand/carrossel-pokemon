@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Carrousel!</title>
-    <link rel="shortcut icon" href="/src/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/css/reset.css">
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
 
@@ -29,7 +29,7 @@
                     <p class="life">HP 300</p>
                 </div>
                 <div class="image-container">
-                    <img src="/src/images/pikachu.png" alt="Pikachu" class="pokemon-image">
+                    <img src="src/images/pikachu.png" alt="Pikachu" class="pokemon-image">
                 </div>
                 <div class="description">
                     <h3 class="title">Description</h3>
@@ -37,7 +37,7 @@
                         its cheeks.</p>
                 </div>
 
-                <div class="description details">
+                <div class="details-container">
                     <div class="detail-item">
                         <h3 class="title">Height</h3>
                         <p class="text">0.4 Meters</p>
@@ -50,7 +50,7 @@
                         <h3 class="title">Type</h3>
                         <p class="text">Electric</p>
                     </div>
-                     <div class="detail-item">
+                    <div class="detail-item">
                         <h3 class="title">Gender</h3>
                         <p class="text">♀</p>
                     </div>
@@ -62,7 +62,7 @@
                     <p class="life">HP 800</p>
                 </div>
                 <div class="image-container">
-                    <img src="/src/images/charizard.png" alt="Charizard" class="pokemon-image">
+                    <img src="src/images/charizard.png" alt="Charizard" class="pokemon-image">
                 </div>
                 <div class="description">
                     <h3 class="title">Description</h3>
@@ -71,12 +71,22 @@
                         weaker than itself.</p>
                 </div>
                 <div class="details-container">
-                    <h3 class="title">Height</h3>
-                    <p class="text">1.7 Meters</p>
-                    <h3 class="title">Weight</h3>
-                    <p class="text">90.5 Kilograms</p>
-                    <h3 class="title">Type</h3>
-                    <p class="text">Fire, Flying</p>
+                    <div class="detail-item">
+                        <h3 class="title">Height</h3>
+                        <p class="text">1.7 Meters</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3 class="title">Weight</h3>
+                        <p class="text">90.5 Kilograms</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3 class="title">Type</h3>
+                        <p class="text">Fire, Flying</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3 class="title">Gender</h3>
+                        <p class="text">♂</p>
+                    </div>
                 </div>
             </li>
             <li class="card bg-3">
@@ -85,7 +95,7 @@
                     <p class="life">HP 1200</p>
                 </div>
                 <div class="image-container">
-                    <img src="/src/images/mewtwo.png" alt="Mewtwo" class="pokemon-image">
+                    <img src="src/images/mewtwo.png" alt="Mewtwo" class="pokemon-image">
                 </div>
                 <div class="description">
                     <h3 class="title">Description</h3>
@@ -94,18 +104,27 @@
                         compassionate heart.</p>
                 </div>
                 <div class="details-container">
-                    <h3 class="title">Height</h3>
-                    <p class="text">2 Meters</p>
-                    <h3 class="title">Weight</h3>
-                    <p class="text">122 Kilograms</p>
-                    <h3 class="title">Type</h3>
-                    <p class="text">Psychic</p>
+                    <div class="detail-item">
+                        <h3 class="title">Height</h3>
+                        <p class="text">2 Meters</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3 class="title">Weight</h3>
+                        <p class="text">122 Kilograms</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3 class="title">Type</h3>
+                        <p class="text">Psychic</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3 class="title">Gender</h3>
+                        <p class="text">N/A</p>
+                    </div>
                 </div>
             </li>
         </ul>
 
-        <button class="btn-arrow btn-forward" id="btn-back">
-            <img src="src/images/arrow.png" alt="forward arrow">
+        <button class="btn-arrow btn-forward" id="btn-forward"> <img src="src/images/arrow.png" alt="forward arrow">
         </button>
 
     </main>
@@ -114,7 +133,7 @@
 
     </footer>
 
-    <script src="/src/js/script.js"></script>
+    <script src="src/js/script.js"></script>
 
 </body>
 
