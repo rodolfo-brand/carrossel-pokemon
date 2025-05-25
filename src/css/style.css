@@ -1,5 +1,5 @@
 body {
-    font-family: "Outfit", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .header .title {
@@ -31,14 +31,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 80px;
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 .pokemon-list {
   width: 310px;
-  /* Fixed width for the card container */
   height: 520px;
-  /* Fixed height for the card container */
   position: relative;
 }
 
@@ -69,18 +67,14 @@ body {
   height: 110%;
   display: flex;
   flex-direction: column;
-  /* Stack children vertically */
-  /* Removed justify-content: space-between; as it's now handled by flex-grow on image-container */
   position: absolute;
   padding: 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
   overflow: hidden;
-  /* CRITICAL: Ensures content stays within rounded corners */
 }
 
-/* Background images for the card - now with cover to fill the space */
 .bg-1 {
   background: url(../images/bg-1.jpg) no-repeat center center / cover;
 }
@@ -93,7 +87,6 @@ body {
   background: url(../images/bg-3.jpg) no-repeat center center / cover;
 }
 
-/* Selected Card: Chained selector as discussed */
 .selected.card {
   opacity: 1;
   z-index: 1;
@@ -150,8 +143,8 @@ body {
 .card .description .title {
   font-size: 18px;
   margin-bottom: 8px;
-    color: #ffffff;
-  }
+  color: #ffffff;
+}
 
 .card .description .text {
   font-size: 14px;
@@ -190,7 +183,7 @@ body {
 .details-container .title {
   font-size: 16px;
   margin-bottom: 5px;
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .details-container .text {
@@ -211,24 +204,9 @@ body {
   padding: 4px
 }
 
-.type-flying {
-  color: #f7deb0;
-  background-color: rgba(0, 132, 255, 0.486);
-  border-radius: 15px;
-  padding: 4px
-}
-
 .type-psychic {
   color: #f7deb0;
   background-color: rgba(162, 0, 255, 0.486);
   border-radius: 15px;
   padding: 4px
-}
-
-.gender-male {
-  font-size: 22px;
-}
-
-.gender-female {
-  font-size: 22px;
 }

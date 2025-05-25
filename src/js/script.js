@@ -19,22 +19,22 @@ function showCard(cardIndex) {
 
 
 btnForward.addEventListener("click", function () {
-        if (currentCardIndex === cards.length - 1) {
+    if (currentCardIndex === cards.length - 1) {
         return;
     }
 
-        hideSelectedCard();
+    hideSelectedCard();
 
     currentCardIndex++;
-    
+
     showCard(currentCardIndex);
 });
 
 
 btnBack.addEventListener("click", function () {
-    
+
     if (currentCardIndex === 0) {
-    return;
+        return;
     }
 
     hideSelectedCard();
