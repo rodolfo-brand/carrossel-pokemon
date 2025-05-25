@@ -1,5 +1,8 @@
 body {
-  font-family: "Outfit", sans-serif;
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
   background-image: url(../images/bg-site.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,8 +22,8 @@ body {
 }
 
 .header .pokeball {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .pokemon-slider {
@@ -32,8 +35,10 @@ body {
 }
 
 .pokemon-list {
-  width: 310px; /* Fixed width for the card container */
-  height: 520px; /* Fixed height for the card container */
+  width: 310px;
+  /* Fixed width for the card container */
+  height: 520px;
+  /* Fixed height for the card container */
   position: relative;
 }
 
@@ -60,17 +65,19 @@ body {
 }
 
 .card {
-  opacity:0;
-  height: 100%;
+  opacity: 0;
+  height: 110%;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  flex-direction: column;
+  /* Stack children vertically */
   /* Removed justify-content: space-between; as it's now handled by flex-grow on image-container */
   position: absolute;
   padding: 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
-  overflow: hidden; /* CRITICAL: Ensures content stays within rounded corners */
+  overflow: hidden;
+  /* CRITICAL: Ensures content stays within rounded corners */
 }
 
 /* Background images for the card - now with cover to fill the space */
@@ -93,7 +100,7 @@ body {
 }
 
 .card .information {
-  background-color: rgba(179, 177, 185, 0.7);
+  background-color: #0000004b;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,6 +112,7 @@ body {
 .card .information .life {
   background-color: #d81c1c;
   color: white;
+
   border-radius: 20px;
   padding: 6px 10px;
 }
@@ -115,93 +123,112 @@ body {
 }
 
 .card .image-container {
+
   text-align: center;
-  padding: 10px 0; /* Add padding around the image */
-  flex-grow: 1; /* Allows the image container to take up available vertical space */
-  display: flex; /* Make it a flex container to center the image */
+  padding: 10px 0;
+  flex-grow: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  /* Optional: Background color for image area if needed, e.g., background-color: #f8f8f8; */
 }
 
 .card .pokemon-image {
-    max-width: 90%; /* Ensure image fits within its container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Limit image height to prevent it from dominating */
-    object-fit: contain; /* Ensure the image fits without cropping */
+  max-width: 90%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
 }
 
-/* Description Section */
 .card .description {
-  background-color: #0000004b;
   padding: 15px 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   color: #ffffff;
 }
 
 .card .description .title {
-  font-size: 18px; /* Adjusted font size */
-  margin-bottom: 8px; /* Space between title and text */
-  color: #ffffff; /* Ensure title is dark */
-}
+  font-size: 18px;
+  margin-bottom: 8px;
+    color: #ffffff;
+  }
 
 .card .description .text {
   font-size: 14px;
-  padding: 0;
+  padding: 10px;
   text-align: justify;
   max-height: 80px;
   overflow-y: auto;
-  color: #ffffff;
+  border-radius: 10px;
+  background-color: #0000004b;
+  color: #f7deb0;
 }
 
-/* Details Container (Height, Weight, Type, Gender) */
-.details-container { 
-    background-color:#0000004b;
-    padding: 15px 10px; /* Add padding */
-    border-bottom-left-radius: 10px; /* Match card's border radius */
-    border-bottom-right-radius: 10px; /* Match card's border radius */
-    display: flex; /* Make it a flex container */
-    justify-content: space-around; /* Distribute items evenly */
-    align-items: flex-start; /* Align items to the top */
-    flex-wrap: wrap; /* Allow items to wrap if screen is too narrow */
-    gap: 15px 10px; /* Vertical and horizontal gap between items */
-    color: #f7deb0; /* Default text color for details */
+.details-container {
+  padding: 15px 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px 10px;
+  color: #f7deb0;
 }
 
 .details-container .detail-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content within each detail item */
-    text-align: center;
-    flex-basis: 45%; /* Approx. half width for 2 items per row, adjust as needed */
-    /* If you have 4 items, you might want flex-basis: 22% or similar */
-    /* If you want to force 2x2 grid, use flex-basis: 45% and adjust gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #0000002d;
+  text-align: center;
+  flex-basis: 45%;
 }
 
 
 .details-container .title {
-    font-size: 16px;
-    margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
     color: #ffffff;
 }
 
-.type-electric {
-  color: rgb(134, 80, 0);
-  border:rgb(134, 80, 0);
-  background-color: yellow;
-  border-radius: 15px;
-  padding:4px
+.details-container .text {
+  font-weight: 500;
 }
+
+.type-electric {
+  color: #f7deb0;
+  background-color: rgba(255, 255, 0, 0.459);
+  border-radius: 15px;
+  padding: 4px
+}
+
+.type-fire {
+  color: #f7deb0;
+  background-color: rgba(255, 0, 0, 0.555);
+  border-radius: 15px;
+  padding: 4px
+}
+
+.type-flying {
+  color: #f7deb0;
+  background-color: rgba(0, 132, 255, 0.486);
+  border-radius: 15px;
+  padding: 4px
+}
+
+.type-psychic {
+  color: #f7deb0;
+  background-color: rgba(162, 0, 255, 0.486);
+  border-radius: 15px;
+  padding: 4px
+}
+
 .gender-male {
-    font-weight: bolder;
-    font-size: 30px;
-    color: #ADD8E6;
+  font-size: 22px;
 }
 
 .gender-female {
-  font-weight: bolder;
-    font-size: 30px;
-    color: #ea899a;
+  font-size: 22px;
 }
