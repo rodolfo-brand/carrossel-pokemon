@@ -114,3 +114,49 @@ body {
 .card .image-container {
   text-align: center;
 }
+
+.card .description {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.cartao .description .title {
+  background-color: #333333;
+  font-size: 15px;
+  color: white;
+  padding: 12px;
+}
+
+.card .description .text {
+  font-size: 14px;
+  padding: 12px;
+  text-align: justify;
+  max-height: 115px;
+  overflow-y: auto;
+}
+
+.card .description.details {
+    display: flex; /* Make the main container a flex container */
+    justify-content: space-around; /* Distribute items with space between them */
+    align-items: flex-start; /* Align items to the top if they have different heights */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    gap: 15px; /* Add some space between items */
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.card .description .detail-item {
+    display: flex; /* Make each detail item a flex container */
+    flex-direction: column; /* Stack the h3 and p vertically */
+    align-items: center; /* Center the text horizontally within each item */
+    text-align: center; /* Ensure text alignment is centered */
+}
+
+.description.details .title {
+    font-size: 16px; /* Adjust font size as needed */
+    margin-bottom: 5px; /* Space between title and text */
+    color: #f1ecff; /* Example color, adjust to your design */
+}
+
+.description.details .text {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #c9c9c9; /* Example color, adjust to your design */
+}
