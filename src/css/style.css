@@ -1,12 +1,32 @@
 body {
-
+  font-family: "Outfit", sans-serif;
+  background-image: url(/src/images/bg-site.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-top: 50px;
+}
 
+.header .title {
+  color: #f1ecff;
+}
+
+.header .pokeball {
+    width: 25px;
+    height: 25px;
 }
 
 .pokemon-slider {
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 60px 0;
 }
-
