@@ -30,3 +30,31 @@ body {
   gap: 80px;
   margin: 60px 0;
 }
+
+.pokemon-list {
+  width: 310px;
+  height: 520px;
+  position: relative;
+}
+
+.btn-arrow {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-back {
+  transform: rotateY(180deg);
+}
+
+.btn-arrow:hover {
+  background-color: #8351fe;
+}
