@@ -157,7 +157,7 @@ body {
   font-size: 14px;
   padding: 10px;
   text-align: justify;
-  max-height: 80px;
+  max-height: 100px;
   overflow-y: auto;
   border-radius: 10px;
   background-color: #0000004b;
