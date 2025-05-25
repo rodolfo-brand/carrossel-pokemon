@@ -1,6 +1,6 @@
 body {
   font-family: "Outfit", sans-serif;
-  background-image: url(/src/images/bg-site.png);
+  background-image: url(../images/bg-site.png);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -70,4 +70,47 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
+}
+
+.selected {
+  opacity: 1;
+  z-index: 1;
+}
+
+.bg-1 {
+  background: url(../images/bg-1.jpg) no-repeat;
+}
+
+.bg-2 {
+  background: url(../images/bg-2.jpg) no-repeat;
+}
+
+.bg-3 {
+  background: url(../images/bg-3.jpg) no-repeat;
+}
+
+.card .information {
+  background-color: rgba(179, 177, 185, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card .information .life {
+  background-color: #333333;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 10px;
+}
+
+.card .information .name {
+  color: white;
+  font-size: 22px;
+}
+
+.card .image-container {
+  text-align: center;
 }
