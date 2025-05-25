@@ -58,3 +58,16 @@ body {
 .btn-arrow:hover {
   background-color: #8351fe;
 }
+
+.card {
+  opacity:0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
