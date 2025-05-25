@@ -210,3 +210,14 @@ body {
   border-radius: 15px;
   padding: 4px
 }
+
+.btn-arrow.disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+.btn-arrow.disabled:hover {
+    background-color: white;
+}

@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Carrousel!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
@@ -21,7 +18,7 @@
     </header>
 
     <main class="pokemon-slider">
-        <button class="btn-arrow btn-back" id="btn-back">
+        <button class="btn-arrow btn-back" id="btn-back" aria-label="Previous Pokemon">
             <img src="src/images/arrow.png" alt="back arrow">
         </button>
 
@@ -51,11 +48,11 @@
                     </div>
                     <div class="detail-item">
                         <h3 class="title">Type</h3>
-                        <p class="text type-electric">Electric</p>
+                        <p class="text">Electric</p>
                     </div>
                     <div class="detail-item">
                         <h3 class="title">Gender</h3>
-                        <p class="text gender-female">♀️</p>
+                        <p class="text">♀️</p>
                     </div>
                 </div>
             </li>
@@ -84,11 +81,11 @@
                     </div>
                     <div class="detail-item">
                         <h3 class="title">Type</h3>
-                        <p class="text type-fire">Fire</p>
+                        <p class="text">Fire, Flying</p>
                     </div>
                     <div class="detail-item">
                         <h3 class="title">Gender</h3>
-                        <p class="text gender-male">♂️</p>
+                        <p class="text">♂️</p>
                     </div>
                 </div>
             </li>
@@ -102,8 +99,8 @@
                 </div>
                 <div class="description">
                     <h3 class="title">Description</h3>
-                    <p class="text">A Pokemon created with genetic manipulation. However, even though
-                        the scientific power of humans created it’s body, they failed to endow Mewtwo with a
+                    <p class="text">Mewtwo is a Pokemon that was created by genetic manipulation. However, even though
+                        the scientific power of humans created this Pokemon’s body, they failed to endow Mewtwo with a
                         compassionate heart.</p>
                 </div>
                 <div class="details-container">
@@ -117,17 +114,18 @@
                     </div>
                     <div class="detail-item">
                         <h3 class="title">Type</h3>
-                        <p class="text type-psychic">Psychic</p>
+                        <p class="text">Psychic</p>
                     </div>
                     <div class="detail-item">
                         <h3 class="title">Gender</h3>
-                        <p class="text gender-none">N/A</p>
+                        <p class="text">N/A</p>
                     </div>
                 </div>
             </li>
         </ul>
 
-        <button class="btn-arrow btn-forward" id="btn-forward"> <img src="src/images/arrow.png" alt="forward arrow">
+        <button class="btn-arrow btn-forward" id="btn-forward" aria-label="Next Pokemon">
+            <img src="src/images/arrow.png" alt="forward arrow">
         </button>
 
     </main>
