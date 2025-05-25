@@ -66,7 +66,7 @@ body {
   flex-direction: column; /* Stack children vertically */
   /* Removed justify-content: space-between; as it's now handled by flex-grow on image-container */
   position: absolute;
-  padding: 0; /* Remove padding from card, add to inner sections */
+  padding: 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
@@ -103,7 +103,7 @@ body {
 }
 
 .card .information .life {
-  background-color: #333333;
+  background-color: #d81c1c;
   color: white;
   border-radius: 20px;
   padding: 6px 10px;
@@ -167,7 +167,7 @@ body {
     align-items: flex-start; /* Align items to the top */
     flex-wrap: wrap; /* Allow items to wrap if screen is too narrow */
     gap: 15px 10px; /* Vertical and horizontal gap between items */
-    color: #333; /* Default text color for details */
+    color: #f7deb0; /* Default text color for details */
 }
 
 .details-container .detail-item {
@@ -180,13 +180,28 @@ body {
     /* If you want to force 2x2 grid, use flex-basis: 45% and adjust gap */
 }
 
+
 .details-container .title {
     font-size: 16px;
     margin-bottom: 5px;
-    color: #ffffff; /* Darker color for titles */
+    color: #ffffff;
 }
 
-.details-container .text {
-    font-size: 14px;
-    color: #ffffff; /* Darker color for text */
+.type-electric {
+  color: rgb(134, 80, 0);
+  border:rgb(134, 80, 0);
+  background-color: yellow;
+  border-radius: 15px;
+  padding:4px
+}
+.gender-male {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #ADD8E6;
+}
+
+.gender-female {
+  font-weight: bolder;
+    font-size: 30px;
+    color: #ea899a;
 }
