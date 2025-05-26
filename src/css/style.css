@@ -59,7 +59,7 @@ body {
 }
 
 .btn-arrow:hover {
-  background-color: #8351fe;
+  background-color: #2a165e96;
 }
 
 .card {
@@ -136,8 +136,6 @@ body {
   padding: 15px 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  color: #ffffff;
 }
 
 .card .description .title {
@@ -153,7 +151,7 @@ body {
   max-height: 100px;
   overflow-y: auto;
   border-radius: 10px;
-  background-color: #0000004b;
+  background-color: #00000071;
   color: #f7deb0;
 }
 
@@ -174,9 +172,10 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
-  background-color: #0000002d;
+  background-color: #00000071;
   text-align: center;
   flex-basis: 45%;
+  padding: 3px;
 }
 
 
@@ -220,4 +219,8 @@ body {
 
 .btn-arrow.disabled:hover {
     background-color: white;
+}
+
+.gender {
+  padding-bottom: 7px;
 }
